@@ -7,7 +7,7 @@ camara, those images are huge in filesize, e.g. around 2MB. The pipeline now aut
 different size and optimizes them for file site. From our original image we get for example a 450x300px image with a
 file size of 40kB.
 
-The image optimizing pipeline is implemented in `_plugins/pre-processor.rb` and `_plugins/image-optimizer.rb`.
+The image optimizing pipeline is implemented in `pre-processor.rb` and `image-optimizer.rb`.
 
 The first script converts the markdown image tag into a custom format, which is the used by the second script to
 generate HTML code.
