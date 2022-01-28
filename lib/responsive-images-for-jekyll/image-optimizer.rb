@@ -129,4 +129,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('image', ImageInlineTag)
+Liquid::Template.register_tag('image', Jekyll::ImageInlineTag)
