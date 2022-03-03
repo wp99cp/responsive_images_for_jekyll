@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'responsive-images-for-jekyll'
-  s.version     = '0.1.3'
+  s.version     = '0.2.0'
   s.date        = '2022-01-28'
   s.summary     = 'Creates responsive and optimized images for Jekyll!'
   s.description = ''

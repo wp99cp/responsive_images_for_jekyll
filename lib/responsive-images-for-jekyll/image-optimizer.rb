@@ -118,10 +118,13 @@ module Jekyll
       path_450x300 = resize(args[0], '450x300')
 
       # Write the output HTML string
-      output = "<img src=\"#{ path_1800x1200 }\" alt=\"#{ args[1] }\"
+      output = "<figure>
+                  <img src=\"#{ path_1800x1200 }\" alt=\"#{ args[1] }\"
                        srcset=\" #{path_1800x1200} 1800w, #{path_1200x800} 1200w,
                                  #{path_1125x750} 1125w,  #{path_600x400} 600w,
-                                 #{path_450x300} 450w \"/>"
+                                 #{path_450x300} 450w \"/>
+                  <span> #{ args[1] } </span>
+                </figure>"
 
       # Render it on the page by returning it
       return output;
