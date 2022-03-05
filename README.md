@@ -51,7 +51,7 @@ Markdown line:
 ```
 
 An example of such a generation of the annotation image on the fly can be found in
-the [cevi-logo-generator](/link/to/branch) branch.
+the [cevi-logo-generator](https://github.com/wp99cp/responsive_images_for_jekyll/tree/cevi-logo-generator) branch.
 
 ## Installation / Use it for your own page
 
