@@ -54,7 +54,7 @@ module AnnotationBuilder
 
     # We only want to annotate images with a width of exactly 1800 pixels.
     # For all other images we create an empty SVG graphic!
-    if svg_w == 1125
+    if svg_w == 1800
       svg.build do
         svg.css = {
           '*': {
