@@ -14,6 +14,7 @@ module Jekyll
   class ImageInlineTag < Liquid::Tag
 
     # Include the module of the AnnotationBuilder
+    include AnnotationBuilder
 
     CACHE_DIR = "imgs/"
     HASH_LENGTH = 8
@@ -65,8 +66,6 @@ module Jekyll
       !File.exist?(dest_path) || File.mtime(dest_path) <= File.mtime(src_path)
     end
 
-    # Read, process, and write out as new image.
-    def _process_img(src_path, options, dest_path)
     #
     # Annotate the image with a custom SVG graphic.
     # The graphic can be created on the fly using the img_desc
@@ -78,6 +77,9 @@ module Jekyll
     def annotate_image(dest_path, img_desc, img_dim)
 
       annotation_file_name = 'imgs/annotation.svg'
+
+      # Creates the SVG graphic (customize this function to change the graphic)
+      create_svg(img_desc, annotation_file_name, img_dim)
 
       # Load Annotation SVG from the annotation_file_name
       svg_logo = Magick::ImageList.new(annotation_file_name) do |c|
