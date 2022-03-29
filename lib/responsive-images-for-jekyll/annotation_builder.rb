@@ -7,7 +7,7 @@ module AnnotationBuilder
   def _estimate_str_width(str, font_size)
 
     label = Magick::Draw.new
-    label.font = "Ubuntu"
+    label.font = "Ubuntu-Regular"
     label.font_size(font_size)
     label.text_antialias(true)
     label.font_style = Magick::NormalStyle
@@ -63,8 +63,8 @@ module AnnotationBuilder
         }
         polygon points: %W[#{svg_w - 100},#{svg_h - 100 - claim_height - claim_space} #{arrow_position_x + arrow_width / 2 },#{svg_h - 100 - claim_height - claim_space}  #{arrow_position_x},#{svg_h - 100 - claim_height - claim_space - arrow_height}  #{arrow_position_x - arrow_width / 2},#{svg_h - 100 - claim_height - claim_space}  #{svg_w - claim2_width - 100},#{svg_h - 100 - claim_height - claim_space}  #{svg_w - claim2_width - 100},#{svg_h - 100 - 2 * claim_height - claim_space} #{svg_w - 100},#{svg_h - 100 - 2 * claim_height - claim_space}], fill: '#ffffff', style: { stroke: '#ffffff' }
         polygon points: %W[#{svg_w - 125},#{svg_h - 100} #{svg_w - 125 - claim_width},#{svg_h - 100} #{svg_w - 125 - claim_width},#{svg_h - 100 - claim_height} #{arrow_position_x - arrow_width / 2},#{svg_h - 100 - claim_height} #{arrow_position_x},#{svg_h - 100 - claim_height - arrow_height} #{arrow_position_x + arrow_width / 2},#{svg_h - 100 - claim_height} #{svg_w - 125},#{svg_h - 100 - claim_height}], fill: '#ffffff', style: { stroke: '#ffffff' }
-        svg.text "Cevi Züri 11", text_anchor: :center, x: svg_w - 125 - claim_width / 2, y: svg_h - 100 - claim_v_border, font_weight: 'bold', font_family: 'Ubuntu', font_size: claim_font_size, fill: :"#585858", style: { stroke: '#585858' }
-        svg.text img_desc, text_anchor: :center, x: svg_w - 100 - claim2_width / 2, y: svg_h - 100 - claim_v_border - claim_height - claim_space, font_weight: 'bold', font_family: 'Ubuntu', font_size: claim_font_size, fill: :"#585858", style: { stroke: '#585858' }
+        svg.text "Cevi Züri 11", text_anchor: :center, x: svg_w - 125 - claim_width / 2, y: svg_h - 100 - claim_v_border, font_weight: 'bold', font_family: 'Ubuntu-Regular', font_size: claim_font_size, fill: :"#585858", style: { stroke: '#585858' }
+        svg.text img_desc, text_anchor: :center, x: svg_w - 100 - claim2_width / 2, y: svg_h - 100 - claim_v_border - claim_height - claim_space, font_weight: 'bold', font_family: 'Ubuntu-Regular', font_size: claim_font_size, fill: :"#585858", style: { stroke: '#585858' }
       end
 
     end
