@@ -18,7 +18,7 @@ module AnnotationBuilder
     width = metrics.width
 
     # correction constant
-    width * 2.68
+    width * 3.2
 
   end
 
